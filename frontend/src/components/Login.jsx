@@ -5,7 +5,8 @@ function Login({ setToken, setRole }) {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    const res = await fetch("http://localhost:5000/api/auth/login", {
+    const res = await fetch("https://yash-auth-backend.onrender.com/api/auth/login"
+, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
